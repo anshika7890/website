@@ -1,114 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Professional Responsive Website</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduPro - Student Skill Accelerator</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  line-height:1.6;
+  color:#333;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  background:#0f2027;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+  z-index:1000;
+}
+
+nav h2{
+  color:white;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+}
+
+nav ul li{
+  margin-left:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:#ff9800;
+}
+
+/* HERO SECTION */
+.hero{
+  height:100vh;
+  background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:white;
+  padding:0 20px;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+.btn{
+  padding:12px 30px;
+  background:#ff9800;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:#ffa726;
+}
+
+/* SECTIONS */
+section{
+  padding:90px 10%;
+}
+
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:#0f2027;
+}
+
+/* ABOUT */
+.about{
+  background:#f4f6f8;
+  text-align:center;
+}
+
+/* TEAM */
+.team-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  width:260px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+  text-align:center;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+}
+
+.card h3{
+  margin:15px 0 5px;
+}
+
+/* TECHNOLOGIES */
+.tech-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.tech{
+  background:#0f2027;
+  color:white;
+  padding:20px 30px;
+  border-radius:10px;
+  font-weight:500;
+}
+
+/* PROJECTS */
+.projects{
+  background:#f4f6f8;
+}
+
+.project-container{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+
+.contact a{
+  color:#ff9800;
+  text-decoration:none;
+  font-weight:500;
+}
+
+/* FOOTER */
+footer{
+  background:#0f2027;
+  color:white;
+  text-align:center;
+  padding:20px;
+  margin-top:40px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .hero h1{
+    font-size:32px;
+  }
+
+  nav ul{
+    display:none;
+  }
+}
+
+</style>
 </head>
 <body>
 
-<!-- ===== Navbar ===== -->
-<header class="navbar">
-  <div class="logo">WebPractical</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#tech">Technologies</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+<!-- NAVBAR -->
+<nav>
+  <h2>EduPro</h2>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#tech">Technologies</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<!-- ===== Hero Section ===== -->
-<section id="home" class="hero">
-  <h1>Responsive One-Page Website</h1>
-  <p>Designed using HTML & CSS</p>
-</section>
-
-<!-- ===== About Section ===== -->
-<section id="about" class="about">
-  <div class="about-content">
-    <div>
-      <h2>About This Project</h2>
-      <p>
-        This website is created as a practical assignment using HTML and CSS.
-        It follows modern design principles, proper alignment, spacing, and
-        responsive layout for all screen sizes.
-      </p>
-    </div>
-    <img src="images/responsive.png" alt="Responsive Design">
+<!-- HERO -->
+<section class="hero" id="home">
+  <div>
+    <h1>Student Skill Accelerator</h1>
+    <p>Empowering students with practical skills, real-world projects, and career guidance.</p>
+    <a href="#about" class="btn">Explore More</a>
   </div>
 </section>
 
-<!-- ===== Team Section ===== -->
-<section id="team" class="team">
-  <h2>Our Team</h2>
+<!-- ABOUT -->
+<section class="about" id="about">
+  <h2 class="section-title">About EduPro</h2>
+  <p>EduPro is a modern student-focused platform designed to help learners build technical and professional skills through guided projects, mentorship, and hands-on learning experiences.</p>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <h2 class="section-title">Our Team</h2>
   <div class="team-container">
     <div class="card">
-      <img src="images/team1.jpg">
-      <h3>Member One</h3>
+      <h3>Anshika Srivastava</h3>
       <p>Frontend Developer</p>
     </div>
     <div class="card">
-      <img src="images/team2.jpg">
-      <h3>Member Two</h3>
-      <p>UI Designer</p>
+      <h3>UI Specialist</h3>
+      <p>Design & User Experience</p>
     </div>
     <div class="card">
-      <img src="images/team3.jpg">
-      <h3>Member Three</h3>
-      <p>Backend Developer</p>
+      <h3>Backend Engineer</h3>
+      <p>Server & Database Expert</p>
     </div>
   </div>
 </section>
 
-<!-- ===== Technologies Section ===== -->
-<section id="tech" class="tech">
-  <h2>Technologies Used</h2>
+<!-- TECHNOLOGIES -->
+<section id="tech">
+  <h2 class="section-title">Technologies Used</h2>
   <div class="tech-container">
-    <div class="tech-card">
-      <img src="images/html.png">
-      <h4>HTML5</h4>
-    </div>
-    <div class="tech-card">
-      <img src="images/css.png">
-      <h4>CSS3</h4>
-    </div>
-    <div class="tech-card">
-      <img src="images/js.png">
-      <h4>JavaScript</h4>
-    </div>
-    <div class="tech-card">
-      <img src="images/responsive.png">
-      <h4>Responsive Design</h4>
-    </div>
+    <div class="tech">HTML5</div>
+    <div class="tech">CSS3</div>
+    <div class="tech">JavaScript</div>
+    <div class="tech">Responsive Design</div>
   </div>
 </section>
 
-<!-- ===== Projects Section ===== -->
-<section id="projects" class="projects">
-  <h2>Our Projects</h2>
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <h2 class="section-title">Our Projects</h2>
   <div class="project-container">
-    <div class="project-card">
-      <img src="images/project1.jpg">
-      <h3>Project One</h3>
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>Responsive personal portfolio built using HTML & CSS.</p>
     </div>
-    <div class="project-card">
-      <img src="images/project2.jpg">
-      <h3>Project Two</h3>
+    <div class="card">
+      <h3>Student Management System</h3>
+      <p>Database-driven system for managing student records.</p>
     </div>
-    <div class="project-card">
-      <img src="images/project3.jpg">
-      <h3>Project Three</h3>
+    <div class="card">
+      <h3>AI Learning App</h3>
+      <p>Educational AI assistant for smart concept mapping.</p>
     </div>
   </div>
 </section>
 
-<!-- ===== Footer ===== -->
-<footer id="contact">
-  <p>© 2026 Practical-9 | Designed by Student</p>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <h2 class="section-title">Contact Us</h2>
+  <p>Email: <a href="mailto:anshikasriv9114@gmail.com">anshikasriv9114@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/anshika-srivastava-6bb41b2a2" target="_blank">View Profile</a></p>
+  <p>GitHub: <a href="https://github.com/anshika7890" target="_blank">View Projects</a></p>
+</section>
+
+<footer>
+  © 2026 EduPro | Designed by Anshika Srivastava
 </footer>
 
 </body>
