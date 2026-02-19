@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* Navbar */
+.navbar {
+  background: #0a3d62;
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Sections */
+section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+h2 {
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+
+/* About */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.about img {
+  width: 300px;
+}
+
+/* Team */
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Technologies */
+.tech-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tech-card img {
+  width: 60px;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card img {
+  width: 200px;
+  border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  background: #0a3d62;
+  color: white;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .team-container,
+  .tech-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container,
+  .tech-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-container {
+    flex-direction: column;
+  }
+}
